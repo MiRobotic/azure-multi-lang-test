@@ -79,6 +79,7 @@ public class AzureSpeechRecognizer {
 
     public void setSpeechResultListener(OnSpeechResultListener speechResultListener) {
         this.speechResultListener = speechResultListener;
+        stopRecognition();
     }
 
     public void startContinuousRecognition() {

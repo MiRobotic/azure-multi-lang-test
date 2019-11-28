@@ -3,6 +3,7 @@ package com.mirobotic.azuremultilanguage
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import kotlinx.android.synthetic.main.activity_speech_to_test.*
 import android.view.MenuItem
 
@@ -54,7 +55,9 @@ class SpeechToTestActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        azureSpeechRecognizer.startContinuousRecognition()
+        Handler().postDelayed(Runnable {
+            azureSpeechRecognizer.startContinuousRecognition()
+        },200)
     }
 
     override fun onPause() {
