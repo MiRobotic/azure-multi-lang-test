@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".SplashActivity">
+
+
+    <EditText
+        android:id="@+id/etKey"
+        android:hint="Enter subscription Key here"
+        android:padding="15dp"
+        android:autofillHints="no"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,UnusedAttribute" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:text="@string/select_language_below"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/spnLang"
+        android:entries="@array/languages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:text="@string/start"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -17,7 +17,7 @@ import static android.Manifest.permission.RECORD_AUDIO;
 public class AzureSpeechRecognizer {
 
 
-    private static final String KEY = "162ed0fd88ae4a1097759d37d589a8e9";
+    private static String KEY = "";
 
     private static final String REGION = "eastus";
 
@@ -44,8 +44,9 @@ public class AzureSpeechRecognizer {
 
     private static AzureSpeechRecognizer speechRecognizer = null;
 
-    public static AzureSpeechRecognizer getInstance(Activity activity,String langCode){
+    public static AzureSpeechRecognizer getInstance(Activity activity,String key, String langCode){
         LANG_CODE = langCode;
+        KEY = key;
         if (speechRecognizer == null){
             speechRecognizer = new AzureSpeechRecognizer(activity);
         }

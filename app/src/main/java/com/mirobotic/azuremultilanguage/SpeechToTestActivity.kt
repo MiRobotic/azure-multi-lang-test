@@ -25,6 +25,9 @@ class SpeechToTestActivity : AppCompatActivity() {
 
         val code = intent.getStringExtra("code")
         val lang = intent.getStringExtra("language")
+        val key = intent.getStringExtra("key")
+
+        tvLanguage.text = lang
 
         val speechListener = object : AzureSpeechRecognizer.OnSpeechResultListener{
 
@@ -49,7 +52,7 @@ class SpeechToTestActivity : AppCompatActivity() {
             }
         }
 
-        azureSpeechRecognizer = AzureSpeechRecognizer.getInstance(this@SpeechToTestActivity,code)
+        azureSpeechRecognizer = AzureSpeechRecognizer.getInstance(this@SpeechToTestActivity,key, code)
         azureSpeechRecognizer.setSpeechResultListener(speechListener)
     }
 
