@@ -2,6 +2,7 @@
     <string name="app_name">Azure Multi Language Test</string>
     <string name="select_language_below">Select Language below</string>
     <string name="start">Start</string>
+    <string name="key">618a8084f62a40ae923442d89f2b9dd0</string>
     <string-array name="languages">
         <item>Cantonese</item>
         <item>Mandarin</item>
